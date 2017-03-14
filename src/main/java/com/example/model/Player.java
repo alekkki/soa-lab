@@ -13,6 +13,7 @@ public class Player {
     private String name;
 
     @ManyToOne
+    @JoinColumn(referencedColumnName = "team_id")
     private Team team;
 
     public Player(String name, Team team) {

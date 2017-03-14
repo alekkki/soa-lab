@@ -10,18 +10,23 @@ public class Score {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
+    @JoinColumn(referencedColumnName = "team_id")
     private Team hostTeam;
 
     @OneToOne
+    @JoinColumn(referencedColumnName = "team_id")
     private Team guestTeam;
 
     @ManyToOne
+    @JoinColumn(referencedColumnName = "league_id")
     private League league;
 
     private Integer hostScore;
 
     private Integer guestScore;
+
+    public Score() {}
 
     public Score(Team hostTeam, Team guestTeam, League league, Integer hostScore, Integer guestScore) {
         this.hostTeam = hostTeam;

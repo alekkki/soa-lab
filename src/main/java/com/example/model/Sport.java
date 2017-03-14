@@ -9,20 +9,23 @@ public class Sport {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "sport_id")
     private Long id;
 
-    @OneToMany(mappedBy = "sport")
-    private List<League> leagues;
+    private String name;
 
-    public Sport(List<League> leagues) {
-        this.leagues = leagues;
+    public Sport() {
+    }
+
+    public Sport(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public List<League> getLeagues() {
-        return leagues;
     }
 }
