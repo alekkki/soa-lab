@@ -1,14 +1,12 @@
-package com.example.repository;
+package com.example.service;
 
 import com.example.model.League;
-import com.example.model.Player;
 import com.example.model.Score;
 import com.example.model.Team;
-import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface ScoreRepository  {
+public interface TeamService {
 
     void addTeam(String name, League league);
 

@@ -1,10 +1,10 @@
-package com.example.repository.impl;
+package com.example.service.impl;
 
 import com.example.model.League;
 import com.example.model.Player;
 import com.example.model.Score;
 import com.example.model.Team;
-import com.example.repository.ScoreRepository;
+import com.example.service.TeamService;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,12 +15,9 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
-/**
- * Created by Win 8 on 13.03.2017.
- */
 @Repository
 @Transactional
-public class ScoreRepositoryImpl implements ScoreRepository {
+public class TeamServiceImpl implements TeamService {
 
     @PersistenceContext(name = "soa-2017")
     EntityManager entityManager;
