@@ -21,11 +21,11 @@ public class ScoreController {
     }
 
     @RequestMapping(value = "/addScore", method = RequestMethod.POST)
-    public void addSport(@RequestParam(value = "hostTeamId") Long hostTeamId,
+    public Score addScore(@RequestParam(value = "hostTeamId") Long hostTeamId,
                          @RequestParam(value = "guestTeamId") Long guestTeamId,
                          @RequestParam(value = "LeagueId") Long leagueId,
                          @RequestParam(value = "hostScore") Integer hostScore,
                          @RequestParam(value = "guestScore") Integer guestScore) {
-        Score score = scoreService.addScore(hostTeamId, guestTeamId, leagueId, hostScore, guestScore);
+        return scoreService.addScore(hostTeamId, guestTeamId, leagueId, hostScore, guestScore);
     }
 }

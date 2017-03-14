@@ -20,7 +20,7 @@ public class LeagueController {
     }
 
     @RequestMapping(value = "/addLeague", method = RequestMethod.POST)
-    public void addLeague(@RequestParam(value = "leagueName") String name, @RequestParam(value = "sportId") Long sportId) {
-        League league = leagueService.addLeague(name, sportId);
+    public League addLeague(@RequestParam(value = "leagueName") String name, @RequestParam(value = "sportId") Long sportId) {
+        return leagueService.addLeague(name, sportId);
     }
 }

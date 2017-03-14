@@ -20,7 +20,7 @@ public class SportController {
     }
 
     @RequestMapping(value = "/addSport", method = RequestMethod.POST)
-    public void addSport(@RequestParam(value = "sportName") String name) {
-        Sport sport = sportService.addSport(name);
+    public Sport addSport(@RequestParam(value = "sportName") String name) {
+        return sportService.addSport(name);
     }
 }
