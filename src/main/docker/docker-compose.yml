@@ -36,4 +36,4 @@ services:
       - 141507-traefik
 
 volumes:
-  my-datavolume: {}
+  141507-datavolume: {}
