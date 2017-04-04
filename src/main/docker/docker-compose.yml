@@ -24,11 +24,11 @@ services:
       - "traefik.enable=false"
 
   141507-app:
-    image: 141507_dockerhub_user/task4
+    image: 141507_dockerhub_user/soa-lab
     labels:
       - "traefik.port=8080"
       - "traefik.backend=141507-app"
-      - "traefik.frontend.rule=Host141507-app.dck.mojserver.mk"
+      - "traefik.frontend.rule=Host:141507-app.dck.mojserver.mk"
     links:
       - 141507-mysql
     depends_on:
