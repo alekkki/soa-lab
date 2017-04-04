@@ -24,7 +24,7 @@ services:
       - "traefik.enable=false"
 
   141507-app:
-    image: 141507_dockerhub_user/soa-lab
+    image: 141507/soa-lab
     labels:
       - "traefik.port=8080"
       - "traefik.backend=141507-app"
