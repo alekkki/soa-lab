@@ -16,6 +16,8 @@ public class Player {
     @JoinColumn(referencedColumnName = "team_id")
     private Team team;
 
+    public Player() {}
+
     public Player(String name, Team team) {
         this.name = name;
         this.team = team;
